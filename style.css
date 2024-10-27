@@ -1,12 +1,21 @@
 html {
 	--black: black;
 	--white: white;
-	--gray: gray;
+	--gray: #959595;
+	--blackgray: #353535;
+	--blue: blue;
 }
 
 * {
 	margin: 0;
 	padding: 0;
+}
+button{
+background-color: var(--blue);
+color: var(--white);
+border-radius: 8px;
+padding: 8px;
+border: 1px solid transparent;
 }
 
 header {
@@ -19,7 +28,7 @@ header {
 }
 
 header,
-nav, article {
+nav, article, ul {
 	display: flex;
 	text-align: center;
 
@@ -51,14 +60,54 @@ article:first-of-type img{
 	
 }
 
+article:first-of-type p{
+	
+	color: var(--gray);
+}
+
 article:nth-of-type(2) {
 flex-direction: column;
+padding: 5%;
+gap: 20px;
 }
+
+ul{
+justify-content: space-between;
+align-items: center;
+gap: 10px;
+}
+li{
+list-style: none;
+}
+
 
 article:nth-of-type(3) {
 flex-direction: column;
+background-color: var(--gray);
+/* color: var(--blackgray); */
+padding: 7%;
+}
+
+
+
+#goodQuote{
+color: var(--blackgray);
+}
+#author{
+color: var(--black);
+display: block;
+font-size: .9rem;
+align-self: end;
+font-weight: bold;
 }
 
 article:nth-of-type(4) {
 flex-direction: column;
+}
+
+figure img{
+width: 7vw;
+height: 8vw;
+border: 2px solid var(--blue);
+border-radius:8px;
 }
